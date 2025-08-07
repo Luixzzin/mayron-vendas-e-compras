@@ -1,0 +1,191 @@
+/* Fontes e cores */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+header.hero {
+    position: relative;
+    background-image: url('https://e0.pxfuel.com/wallpapers/1002/656/desktop-wallpaper-cristiano-ronaldo-lionel-messi-neymar-jr.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+header.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header.hero .hero-content {
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    animation: fadeInDown 2s ease-out;
+}
+
+header.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+header.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+nav {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    padding: 50px 20px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181818;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding: 30px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-block .text {
+    max-width: 50%;
+}
+
+.content-block .text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content-block .text p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.content-block .text .preco {
+    font-size: 1.4rem;
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+.content-block .image {
+    max-width: 40%;
+}
+
+.content-block img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.content-block img:hover {
+    transform: scale(1.05);
+}
+
+.content-block:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.content-block:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    border-top: 1px solid #333;
+}
+
+.redes {
+    margin-top: 10px;
+}
+
+.redes i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.4s ease, color 0.4s;
+}
+
+.redes i:hover {
+    transform: scale(1.3) rotate(10deg);
+    color: #00ffcc;
+}
